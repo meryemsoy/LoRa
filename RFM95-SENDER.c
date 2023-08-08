@@ -10,7 +10,7 @@ int counter = 0;
 void setup() {
   Serial.begin(115200);
   while(!Serial);
-  delay(1000);
+  delay(5000);
   Serial.println("LoRa Sender");
   LoRa.setPins(SS,RESET,DIO0);
   if(!LoRa.begin(868E6)){
@@ -33,5 +33,5 @@ void loop() {
 
   counter++ ;
   
-  delay(5000);
+  delay(10000);
 }
